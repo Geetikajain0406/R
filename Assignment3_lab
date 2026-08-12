@@ -1,0 +1,26 @@
+Ans 1
+A <- c(1:20)
+print(A)
+
+a = c(1:10)
+print(a)
+
+b <- 2:5
+print(b)
+
+b <- 20:1
+print(b)
+
+a <- c(1:20,19:1)
+print(a)
+
+tmp <- c(4, 6, 3)
+print(tmp)
+
+tmp <- c(4, 6, 3)
+
+vec <- rep(tmp , times = 10)
+print(vec)
+
+
+
