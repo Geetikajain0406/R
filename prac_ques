@@ -1,0 +1,34 @@
+x <- c(1, 2, 3, 4, 3, 5)
+x <- x[-3]
+print(x)
+
+
+x <- c(1, 2, 3, 4, 3, 5)
+
+print(which(x==3)[1])
+
+
+x <- c(1, 2, 3, 4, 3, 5)
+
+print(sum(x==3))
+
+
+d <- c(
+    apple=1,
+    banana=2,
+    cherry=3
+)
+
+print(d)
+
+
+df <- data.frame(
+    name= c("a","b","c"),
+    marks = c(10,20,30)
+)
+print(df$name)
+
+
+x <- matrix(1:9,nrow=3,ncol=3)
+print(x)
+
