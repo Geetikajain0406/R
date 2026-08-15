@@ -1,0 +1,10 @@
+s <- "I love python programming in Python for Data Analysis course"
+
+index <- ragexpr("python", s)
+print(index)
+
+
+s <- "banana"
+res <- gsub("a","@",s)
+print(res)
+
