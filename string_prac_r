@@ -1,0 +1,25 @@
+s <- "radar"
+result <- s == paste(rev(strsplit(s, "")[[1]]),collapse = "")
+print(result)
+
+s <- "World of Python Java C Rubi Julia"
+words <-strsplit(s, " ")[[1]]
+res <- words[which.max(nchar(words))]
+print(res)
+
+ remove_dup <- function(s) {
+    s <- tolower(s)
+    words <- strsplit(s, " ")[[1]]
+    uni<- unique(words)
+    return (paste(uni, collapse = " "))
+
+}
+s <- "Python for Data Analysis, Data Analytics, Business Analytics"
+print(remove_dup(s))
+
+s <- "aabbccddeeffggghhiijj"
+words <- strsplit(s , "")[[1]]
+freq <- table(words)
+print(freq)
+top3<- sort(freq, decreasing = TRUE)[1:3]
+print(top3)
