@@ -1,0 +1,11 @@
+veclist <- list(x=1:5,y=2:6,z=3:7)
+lens <- sapply(veclist,length)
+print(lens)
+print(all(lens == lens[1]))
+sum_vec <- sapply(veclist,sum)
+print(sum_vec)
+
+
+a <- 2
+a <- as.integer(a)
+print(typeof(a))
