@@ -1,0 +1,47 @@
+is_prime <- function(n){
+        if (n < 2){
+            return(FALSE)
+        }
+        for (i in 2:(n-1)){
+            if(n %% i == 0)
+            return(FALSE)
+        }
+    return(TRUE)
+}
+num <- c(3, 4, 5, 6, 7, 8, 9, 10)
+for(n in num){
+    print(is_prime(n))
+    }
+
+    s <- " HeLlo123        WorLD "
+s <- gsub("[0-9]","",s)
+s <- tolower(s)
+s <- trimws(s)
+s <- gsub("\\s+"," ", s)
+print(s)
+
+
+rev_list <- function(lst){
+    res <- c()
+    for(i in length(lst):1){
+        res <- c(res , lst[i])
+    }
+    return(res)
+}
+print(rev_list(c(1,2,3,4)))
+
+
+count_vowel <- function(s){
+    s <- tolower(s)
+    count <- 0
+    for(i in 1:nchar(s)){
+        ch <- substr(s,i,i)
+    
+    if(ch %in% c("a","e","i","o","u")){
+        count <- count+1
+    }
+    }
+    return(count)
+}
+print(count_vowel("hello world"))
+
