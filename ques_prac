@@ -1,0 +1,53 @@
+class <- data.frame(
+    Student = c("S01","S02","SO3", "SO4", "S05"),
+    Marks = c(72, 85, 64, 91, 78),
+    Attendance = c(82, 90, 75, 95, 88)
+)
+print(class)
+class$res <- ""
+for(i in 1:nrow(class)){
+        if(class$Marks[i]>=50){
+            class$res[i]<-"PASS"
+            }
+            else{
+                class$res[i]<-"FAIL"
+                }
+}
+print(class)
+avg <- mean(class$Marks)
+print(avg)
+for(i in 1:nrow(class)){
+    if(class$Marks[i]>avg){
+        print(class$Marks[i])
+    }
+}
+highest <- max(class$Marks)
+print(highest)
+
+
+
+sales <- c(120, 150, 135, 180, 165, 200, 175, 190)
+#print(sales)
+avg <-mean(sales)
+print(avg)
+#print(median(sales))
+for(i in 1:length(sales)){
+    if(sales[i]>avg){
+        print(i)
+    }
+}
+for(i in 1:length(sales)){
+    if(sales[i] <150){
+        sales[i] <- NA
+    }
+}
+print(sales)
+valid <- sales[!is.na(sales)]
+total <- sum(valid)
+print(total)
+
+
+
+
+
+
