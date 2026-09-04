@@ -1,0 +1,202 @@
+
+Ans 1
+n = int(input("enter list number"))
+print("enter list values")
+lst = []
+for i in range(n):
+    lst.append(int(input()))
+
+even_list = []
+count = 0
+for i in lst:
+    if i % 2 == 0:
+        even_list.append(i)
+        count += 1
+
+sum_even_list=sum(even_list)
+perc = (sum_even_list/count)
+print("the list enter by user is ",lst)
+print("the even number in the list are",even_list)
+print("the sum of number in the even list is :",sum_even_list)
+print("the percentage of even number in list is :",perc)
+ 
+temperature <- c(32, 35, 31, 29, 36, 34, 30, 38, 33, 28)
+max_temperature_pos <- which.max(temperature)
+min_temperature_pos <- which.min(temperature)
+mean_temp <- mean(temperature)
+less <- function(n){
+  if(n >mean_temp){
+    print(i)
+  }
+}
+count = 0
+for(i in temperature){
+  if(i < 30 || i == 30){
+    count = count +1
+  }
+}
+cat("The Max temperature is at:",max_temperature_pos)
+cat("The Min temperature is at\n:",min_temperature_pos)
+cat("The Mean temperature is at\n:",mean_temp)
+print("The number greater then mean is :")
+for(i in temperature){
+  less(i)
+}
+cat("The Count of temperature less than 30 are:",count)
+
+Odd-
+Ques 1
+marks = [67, 82, 91, 56, 74, 88, 45, 79, 93, 61]
+sort=sorted(marks)
+print(sort[::-1])
+
+[93, 91, 88, 82, 79, 74, 67, 61, 56, 45]
+
+import numpy as np
+marks = [67, 82, 91, 56, 74, 88, 45, 79, 93, 61]
+sort=sorted(marks)
+print(sort[::-1])
+mn = np.mean(marks)
+print("the mean of the marks is:",mn)
+lst =[]
+for i in marks:
+    if i > mn:
+        lst.append(i)
+print("the marks above than the mean is:",lst)
+print("the marks above than the 80 is:")
+for i in marks:
+    if i > 80:
+        print(i)
+
+
+
+
+[93, 91, 88, 82, 79, 74, 67, 61, 56, 45]
+the mean os the marks is: 73.6
+the marks above than the mean is: [82, 91, 74, 88, 79, 93]
+the marks above than the 80 is:
+82
+91
+88
+93
+
+
+ Ans 2
+product <- c("P1","P2","P3","P4","P5","P6")
+quantity <- c(12, 8, 15, 10, 20, 7)
+price <- c(250, 400, 150, 300, 175, 500)
+data <- data.frame(product,quantity,price)
+print(data)
+data$rev <-c(price * quantity)
+print(data)
+ans <- data$product[which.max(data$rev)]
+print(ans)
+print(sum(data$rev))
+print(mean(data$rev))
+
+
+
+
+> marks <- c(67, 82, 91, 56, 74, 88, 45, 79, 93, 61)
+> print(sort(marks))
+ [1] 45 56 61 67 74 79 82 88 91 93
+> print(rev(marks))
+ [1] 61 93 79 45 88 74 56 91 82 67
+> avg <- mean(marks)
+> print(avg)
+[1] 73.6
+> m <- marks[marks> avg]
+> print(m)
+[1] 82 91 74 88 79 93
+> m2 <- marks[marks >80]
+> print(length(m2))
+[1] 4
+
+
+
+
+
+import pandas as pd
+data={
+    "product":["P1","P2","P3","P4","P5","P6"],
+"quantity" :[12, 8, 15, 10, 20, 7],
+"price" :[250, 400, 150, 300, 175, 500]
+}
+df=pd.DataFrame(data)
+print(df)
+df["revenue"] = df["price"]*df["quantity"]
+print(df)
+print(df[df["revenue"]==df["revenue"].max()])
+print(
+
+
+product  quantity  price
+0      P1        12    250
+1      P2         8    400
+2      P3        15    150
+3      P4        10    300
+4      P5        20    175
+5      P6         7    500
+  product  quantity  price  revenue
+0      P1        12    250     3000
+1      P2         8    400     3200
+2      P3        15    150     2250
+3      P4        10    300     3000
+4      P5        20    175     3500
+5      P6         7    500     3500
+  product  quantity  price  revenue
+4      P5        20    175     3500
+5      P6         7    500     3500
+
+
+
+
+
+
+import pandas as pd
+data={
+    "product":["P1","P2","P3","P4","P5","P6"],
+"quantity" :[12, 8, 15, 10, 20, 7],
+"price" :[250, 400, 150, 300, 175, 500]
+}
+df=pd.DataFrame(data)
+print(df)
+df["revenue"] = df["price"]*df["quantity"]
+print(df)
+print(df[df["revenue"]==df["revenue"].max()])
+print(df["revenue"].sum())
+print(df["revenue"].mean())
+
+
+ product  quantity  price
+0      P1        12    250
+1      P2         8    400
+2      P3        15    150
+3      P4        10    300
+4      P5        20    175
+5      P6         7    500
+  product  quantity  price  revenue
+0      P1        12    250     3000
+1      P2         8    400     3200
+2      P3        15    150     2250
+3      P4        10    300     3000
+4      P5        20    175     3500
+5      P6         7    500     3500
+  product  quantity  price  revenue
+4      P5        20    175     3500
+5      P6         7    500     3500
+18450
+3075.0
+
+
+
+
+
+
+
+
+
+
+
+
+
