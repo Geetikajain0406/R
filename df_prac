@@ -1,0 +1,12 @@
+dept <- c("cse","mech","ece","it","ai&ml")
+courses <- c("bca","btech","bba","bcom","ba")
+faculties = c(150, 500, 800, 350, 600)
+uni = c("JIIT", "Amity", "DU", "DTU", "GGSIPU")
+df <- data.frame(
+  dept,courses,faculties,uni
+)
+print(length(df))
+print(summary(df))
+print(str(df))
+print(duplicated(df))
+print(unique(df))
