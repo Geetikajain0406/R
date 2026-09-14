@@ -1,0 +1,17 @@
+attendance <- data.frame(
+  StudentID = c("S01", "S02", "S03", "S04", "S05"),
+  ClassesHeld = c(20, 20, 20, 20, 20),
+  ClassesAttended = c(18, 15, 19, 10, 17)
+)
+
+# Student information
+student_info <- data.frame(
+  StudentID = c("S01", "S02", "S03", "S04", "S05"),
+  Name = c("Rahul", "Priya", "Aman", "Neha", "Karan")
+)
+full_att <- merge(attendance,student_info,by="StudentID" )
+print(full_att)
+full_att$perc <- (full_att$ClassesAttended/full_att$ClassesHeld) *100
+
+low <- full_att[which.min(full_att$perc),]
+print(low)
