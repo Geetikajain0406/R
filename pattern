@@ -1,0 +1,17 @@
+| Pattern             | Meaning            |
+| ------------------- | ------------------ |
+| `[0-9]`             | one digit          |
+| `[A-Z]`             | uppercase letter   |
+| `[a-z]`             | lowercase letter   |
+| `[A-Za-z]`          | any alphabet       |
+| `\\d`               | digit              |
+| `\\d+`              | one or more digits |
+| `\\d{10}`           | exactly 10 digits  |
+| `+`                 | 1 or more          |
+| `*`                 | 0 or more          |
+| `?`                 | 0 or 1             |
+| `{n}`               | exactly n          |
+| `{n,m}`             | n to m             |
+| `\\b`               | word boundary      |
+| `str_extract()`     | first match        |
+| `str_extract_all()` | all matches        |
