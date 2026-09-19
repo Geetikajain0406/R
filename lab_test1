@@ -1,0 +1,101 @@
+NS 1
+lst =[]
+n = int(input("Enter the number of username you want to enter: "))
+for i in range(n):
+    j = input()
+    lst.append(j)
+
+print(lst)
+
+#def username(l):
+count = 0
+l=[]
+for i in lst:
+    for j in range(3::
+        count = count +1
+        l.append(count)
+
+print(l)
+            
+
+ANS 2
+
+> #Merge these two data frames into a single data frame named full_orders so that each row  contains the customer name alongside the order amount. 
+> full_order <- merge(orders,customer_info,by ="custid")
+> print("The merge dataframe is:")
+[1] "The merge dataframe is:"
+> print(full_order)
+  custid orderid amt    name
+1    c01     112 100 geetika
+2    c02     113 200    geet
+3    c03     114 300 aashika
+4    c04     115 400 shreeya
+5    c05     116 500   sneha
+> 
+> 
+> #iii. Using the merged data, calculate the TOTAL spend for each customer (sum of Amount  grouped by Name). 
+> #aggregate(full_order ~amt, data=full_order,sum)
+> #print(full_order)
+> total <- 0
+> for (i in full_order$amt){
++  total <- total+i
++ }
+> print("The aggregate sum of the amount in data frame:")
+[1] "The aggregate sum of the amount in data frame:"
+> print(total)
+[1] 1500
+> print(full_order)
+  custid orderid amt    name
+1    c01     112 100 geetika
+2    c02     113 200    geet
+3    c03     114 300 aashika
+4    c04     115 400 shreeya
+5    c05     116 500   sneha
+> 
+> 
+> #iv. Identify and print the customer with the HIGHEST total spend (your top customer).
+> high <-full_order[which.max(full_order$amt),]
+> print("The name and  order id with highest  total spend:")
+[1] "The name and  order id with highest  total spend:"
+> print(high)
+  custid orderid amt  name
+5    c05     116 500 sneha
+
+
+# Create two data frames: orders with columns OrderID, CustomerID, and Amount. The  CustomerID should be a mix of C01 to C05; and; 
+orderid <- c("112","113","114","115","116")
+custid <- c("c01","c02","c03","c04","c05")
+amt <- c(100,200,300,400,500)
+
+
+#customer_info with columns CustomerID, and Name. Ensure that CustomerID values match  those in orders
+orders <- data.frame(orderid,custid,amt)
+name <- c("geetika","geet","aashika","shreeya","sneha")
+customer_info <-data.frame(name,custid)
+
+
+#Merge these two data frames into a single data frame named full_orders so that each row  contains the customer name alongside the order amount. 
+full_order <- merge(orders,customer_info,by ="custid")
+print("The merge dataframe is:")
+print(full_order)
+
+
+#iii. Using the merged data, calculate the TOTAL spend for each customer (sum of Amount  grouped by Name). 
+#aggregate(full_order ~amt, data=full_order,sum)
+#print(full_order)
+total <- 0
+for (i in full_order$amt){
+  total <- total+i
+}
+print("The aggregate sum of the amount in data frame:")
+print(total)
+print(full_order)
+
+
+#iv. Identify and print the customer with the HIGHEST total spend (your top customer).
+high <-full_order[which.max(full_order$amt),]
+print("The name and  order id with highest  total spend:")
+print(high)
+
+
+
