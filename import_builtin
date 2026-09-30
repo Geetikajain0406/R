@@ -1,0 +1,14 @@
+write.csv(mtcars, "mtcars.csv", row.names = TRUE)
+write.csv(airquality, "airquality.csv", row.names = TRUE)
+
+getwd()
+
+install.packages("readxl")   # only needed once
+
+library(readxl)
+
+airquality_clean <- read_excel(
+  "C:/Users/2405170067/Documents/airquality_clean.xlsx"
+)
+
+print(airquality_clean)
